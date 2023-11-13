@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/images/wallpaperflare.com_wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
+
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+.todoapp{
+    width: 100%;
+    max-width: 500px;
+    background-color: rgb(36, 36, 36);
+    margin: 50px 10px;
+    padding: 50px 20px 50px;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow: hidden;
+    overflow-y: hidden;
+}
+.todoapp h2{
+    color: white;
+    
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: grey;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+button{
+    border: none;
+    outline:none;
+    padding: 16px;
+    background: black;
+    color: white;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    color: white;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+
+}
+
+ul li.checked::before{
+    background-image: url(/images/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+ul li span:hover{
+    background: #edeef0;
+
+}
+
+::placeholder{
+    color: black;
+}
