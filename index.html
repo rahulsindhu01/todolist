@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>To-do list</title>
+    <title>To-do list and Pomodoro Timer</title>
 </head>
 <body>
    <div class="container">
@@ -14,23 +14,25 @@
             <input type="text" id="input-box" placeholder="Add to-do">
             <button onclick="addTask()">Add</button>
         </div>
-        <ul id="listContainer">
-           <!-- <li class="checked">task1</li>
-            <li>task2</li>
-            <li>task3</li> -->
-        </ul>
+        <ul id="listContainer"></ul>
     </div>
-   
-       <div id="timer-container">
+
+    <div id="timer-container">
         <div id="timer">50:00</div>
         <div id="buttons">
           <button onclick="startTimer()">Start</button>
           <button onclick="pauseTimer()">Pause</button>
           <button onclick="resetTimer()">Reset</button>
         </div>
-      </div> 
+        <div class="custom-durations">
+          <label for="focus-duration">Focus Duration (minutes):</label>
+          <input type="number" id="focus-duration" value="25" min="1">
+          <label for="rest-duration">Rest Duration (minutes):</label>
+          <input type="number" id="rest-duration" value="5" min="1">
+        </div>
+      </div>
+    </div>
    
-   </div>
 </body>
 <script src="script.js"></script>
 </html>
