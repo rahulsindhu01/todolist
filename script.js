@@ -44,19 +44,14 @@ let timerStarted = false;
 function startTimer() {
   if (!timerStarted) {
     timerStarted = true;
-    // Check if custom durations are set, otherwise use default values
-    if (focusMinutes === 0 && restMinutes === 0) {
-      focusMinutes = parseInt(document.getElementById('focus-duration').value, 10) || 25;
-      restMinutes = parseInt(document.getElementById('rest-duration').value, 10) || 5;
-    }
-    // Check if the timer has already started; if yes, use the existing durations
-    if (minutes === 0 && seconds === 0) {
-      minutes = focusMinutes;
-      seconds = 0;
-    }
+    // Always reset the timer to the current focus duration
+    minutes = parseInt(document.getElementById('focus-duration').value, 10) || 25;
+    seconds = 0;
     timer = setInterval(updateTimer, 1000);
   }
 }
+
+
 
 function pauseTimer() {
   clearInterval(timer);
