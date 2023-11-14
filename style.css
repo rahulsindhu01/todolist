@@ -6,10 +6,12 @@
     padding: 0;
     font-family: 'Noto Sans', sans-serif;
 }
+
+
 .container{
     width: 100%;
     min-height: 100vh;
-    background-image: url(images/wallpaperflare.com_wallpaper.jpg);
+    background-image: url(/images/wallpaperflare.com_wallpaper.jpg);
     background-size: cover;
     background-position: center;
     padding: 10px;
@@ -33,6 +35,9 @@
     overflow-x: hidden;
     overflow: hidden;
     overflow-y: hidden;
+    backdrop-filter: blur(10px);
+    opacity: 70%;
+    border-radius: 50px;
 }
 .todoapp h2{
     color: white;
@@ -84,7 +89,7 @@ ul li::before{
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background-image: url(images/unchecked.png);
+    background-image: url(/images/unchecked.png);
     background-size: cover;
     background-position: center;
     top: 12px;
@@ -99,7 +104,7 @@ ul li.checked{
 }
 
 ul li.checked::before{
-    background-image: url(images/checked.png);
+    background-image: url(/images/checked.png);
 }
 
 ul li span{
@@ -123,6 +128,10 @@ ul li span:hover{
 ::placeholder{
     color: black;
 }
+
+
+
+
 
 
 #timer-container {
@@ -149,3 +158,27 @@ ul li span:hover{
     gap: 10px;
   }
 
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* ... (existing CSS styles) ... */
+
+.custom-durations {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+}
+
+.custom-durations label,
+.custom-durations input {
+    font-size: large;
+    margin-bottom: 10px;
+    color: white;
+}
